@@ -11,9 +11,6 @@ Players need the shovel item referenced by `Config.RequiredItem` (`shovel` by de
 <img width="1488" height="835" alt="image" src="https://github.com/user-attachments/assets/4e6942ba-ffba-40b4-bdf4-b37e7b6d6f36" />
 
 
-
-
-
 ## Install
 
 1. Put `w2f-graverobbery` beneath `resources/…/` and reference it verbatim in `ensure w2f-graverobbery`.
