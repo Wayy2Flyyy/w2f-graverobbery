@@ -4,6 +4,16 @@ Cemetery scavenging minigame for **Qbox** (`qbx_core`) plus **`ox_lib`**, **`ox_
 
 Players need the shovel item referenced by `Config.RequiredItem` (`shovel` by default). Successful digs roll loot from `config.lua → Config.Loot` and animate through `nui/digging`.
 
+<img width="1484" height="837" alt="image" src="https://github.com/user-attachments/assets/54ebebf8-0b8b-4f76-b6c3-a233cb6d195b" />
+
+<img width="1484" height="834" alt="image" src="https://github.com/user-attachments/assets/a0c0d9a5-0720-43f6-a243-5b767a14fb95" />
+
+<img width="1488" height="835" alt="image" src="https://github.com/user-attachments/assets/4e6942ba-ffba-40b4-bdf4-b37e7b6d6f36" />
+
+
+
+
+
 ## Install
 
 1. Put `w2f-graverobbery` beneath `resources/…/` and reference it verbatim in `ensure w2f-graverobbery`.
