@@ -1,0 +1,15 @@
+Locales['en'] = {
+    ['invalid_grave'] = 'That grave is not valid.',
+    ['too_far_from_grave'] = 'You are too far from the grave.',
+    ['no_shovel'] = 'You do not have a shovel!',
+    ['cooldown_active'] = 'You already dug here, come back later.',
+    ['digging_cancelled'] = 'Digging was interrupted!',
+    ['found_nothing'] = 'You found nothing in the grave...',
+    ['inventory_full'] = 'You do not have enough inventory space!',
+    ['dug_grave'] = 'This grave has already been dug!',
+    ['target_label'] = 'Dig grave',
+    ['progressbar_digging'] = 'Digging grave...',
+    ['minigame_hint'] = 'Dig deep! You have 45 seconds to find treasures.',
+    ['received_items'] = 'You found in the grave:\n%s',
+    ['notify_title'] = 'Grave',
+}
