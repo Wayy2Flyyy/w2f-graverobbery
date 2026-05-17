@@ -4,7 +4,7 @@ lua54 'yes'
 
 name 'w2f-graverobbery'
 author 'wayy2flyyy'
-description 'W2F Framework - Grave robbery activity'
+description 'w2f-graverobbery — Grave robbery activity (Qbox)'
 version '1.0.0'
 
 ui_page 'nui/digging/index.html'
