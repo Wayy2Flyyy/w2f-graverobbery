@@ -10,7 +10,6 @@ Players need the shovel item referenced by `Config.RequiredItem` (`shovel` by de
 
 <img width="1488" height="835" alt="image" src="https://github.com/user-attachments/assets/4e6942ba-ffba-40b4-bdf4-b37e7b6d6f36" />
 
-
 ## Install
 
 1. Put `w2f-graverobbery` beneath `resources/…/` and reference it verbatim in `ensure w2f-graverobbery`.
@@ -25,7 +24,7 @@ Players need the shovel item referenced by `Config.RequiredItem` (`shovel` by de
    ensure w2f-graverobbery
    ```
 
-3. Register **every loot item plus the shovel** in `ox_inventory/data/items.lua`. Any missing key silently blocks rewards:
+3. Register **every loot item plus the shovel** in `ox_inventory/data/items.lua` (merge these entries into the main `return { … }` table). Any missing key silently blocks rewards:
 
 ```lua
 ['shovel'] = {
@@ -36,14 +35,89 @@ Players need the shovel item referenced by `Config.RequiredItem` (`shovel` by de
 },
 
 ['bone'] = {
-    label = 'Animal Bone',
+    label = 'Bone',
     weight = 200,
     stack = true,
     close = true,
 },
-```
 
-Repeat the shape for rows such as `dirt`, `ruby`, `emerald`, `ancient_artifact`, etc.—copy names exactly from `config.lua`.
+['dirt'] = {
+    label = 'Dirt',
+    weight = 800,
+    stack = true,
+    close = true,
+},
+
+['old_ring'] = {
+    label = 'Old Ring',
+    weight = 100,
+    stack = true,
+    close = true,
+},
+
+['silver_coin'] = {
+    label = 'Silver Coin',
+    weight = 50,
+    stack = true,
+    close = true,
+},
+
+['ruby'] = {
+    label = 'Ruby',
+    weight = 50,
+    stack = true,
+    close = true,
+},
+
+['emerald'] = {
+    label = 'Emerald',
+    weight = 50,
+    stack = true,
+    close = true,
+},
+
+['diamond'] = {
+    label = 'Diamond',
+    weight = 30,
+    stack = true,
+    close = true,
+},
+
+['old_weapon'] = {
+    label = 'Old Weapon',
+    weight = 4000,
+    stack = true,
+    close = true,
+},
+
+['gold_necklace'] = {
+    label = 'Gold Necklace',
+    weight = 300,
+    stack = true,
+    close = true,
+},
+
+['ancient_artifact'] = {
+    label = 'Ancient Artifact',
+    weight = 600,
+    stack = true,
+    close = true,
+},
+
+['cursed_skull'] = {
+    label = 'Cursed Skull',
+    weight = 1200,
+    stack = true,
+    close = true,
+},
+
+['treasure_map'] = {
+    label = 'Treasure Map',
+    weight = 100,
+    stack = true,
+    close = true,
+},
+```
 
 **Inventory icons**: add **`{item}.png`** files for each ox key (`shovel`, every `Config.Loot` entry) under **`install_assets/items/`**, then deploy them to **`ox_inventory/web/images/`** — see **`install_assets/README.md`**.
 
