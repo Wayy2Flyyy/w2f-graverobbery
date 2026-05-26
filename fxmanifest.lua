@@ -4,7 +4,7 @@ lua54 'yes'
 
 name 'w2f-graverobbery'
 author 'wayy2flyyy'
-description 'w2f-graverobbery — Grave robbery activity (Qbox)'
+description 'w2f-graverobbery — Grave robbery activity (Qbox/QBCore/ESX)'
 version '1.0.0'
 
 ui_page 'nui/digging/index.html'
@@ -19,20 +19,21 @@ shared_scripts {
     'locales/locale.lua',
     'locales/en.lua',
     'config.lua',
+    'shared/framework.lua',
 }
 
 client_scripts {
-    '@qbx_core/modules/lib.lua',
+    'client/framework.lua',
     'client/main.lua',
 }
 
 server_scripts {
     'webhook_config.lua',
+    'server/framework.lua',
     'server/server.lua',
 }
 
 dependencies {
-    'qbx_core',
     'ox_lib',
     'ox_inventory',
     'ox_target',

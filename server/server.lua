@@ -1,5 +1,8 @@
 local playerCooldowns = {}
 
+W2F.Framework.Detect()
+
+
 do
     local function trimNonemptyConvar(key)
         local v = GetConvar(key, '')
@@ -15,21 +18,15 @@ do
 end
 
 local function getPlayer(src)
-    return exports.qbx_core:GetPlayer(src)
+    return W2F.Framework.GetPlayer(src)
 end
 
-local function playerName(player)
-    local ci = player.PlayerData.charinfo
-    return ('%s %s'):format(ci.firstname, ci.lastname)
+local function playerName(src)
+    return W2F.Framework.GetCharName(src)
 end
 
 local function notify(src, message, notifyType, duration)
-    lib.notify( src, {
-        title       = _U('notify_title'),
-        description = message,
-        type        = notifyType or 'info',
-        duration    = duration or 3500,
-    })
+    W2F.Framework.Notify(src, message, notifyType, duration)
 end
 
 local function sendWebhook(webhook, embeds)
@@ -100,7 +97,7 @@ RegisterNetEvent('w2f-graverobbery:digGrave', function(graveId, minigameItems)
         return
     end
 
-    local citizenid = player.PlayerData.citizenid
+    local citizenid = W2F.Framework.GetIdentifier(src)
     local now       = os.time()
     playerCooldowns[citizenid] = playerCooldowns[citizenid] or {}
 
@@ -141,14 +138,14 @@ RegisterNetEvent('w2f-graverobbery:digGrave', function(graveId, minigameItems)
         sendWebhook(WebhookConfig.LootWebhook, {{
             title       = 'W2F Grave Robbery — Loot Received',
             description = ('**Player:** %s\n**Identifier:** %s\n**Grave:** %s\n**Items:**\n%s'):format(
-                playerName(player), citizenid, grave.label, list
+                playerName(src), citizenid, grave.label, list
             ),
             color     = WebhookConfig.Colors.loot,
             timestamp = os.date('!%Y-%m-%dT%H:%M:%S'),
         }})
 
         print(('[w2f-graverobbery] %s [%s] dug "%s" → %s'):format(
-            playerName(player), citizenid, grave.label, list
+            playerName(src), citizenid, grave.label, list
         ))
     end
 

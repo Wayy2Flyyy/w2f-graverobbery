@@ -1,6 +1,6 @@
 # w2f-graverobbery
 
-Cemetery scavenging activity for **Qbox** (`qbx_core`) using `ox_lib`, `ox_target`, and `ox_inventory`.
+Cemetery scavenging activity for **Qbox/QBCore/ESX** using `ox_lib`, `ox_target`, and `ox_inventory`.
 
 Players need the item configured in `Config.RequiredItem` (`shovel` by default). Successful digs use the digging NUI minigame, then roll loot from `config.lua` -> `Config.Loot`.
 
@@ -14,7 +14,7 @@ Players need the item configured in `Config.RequiredItem` (`shovel` by default).
 
 ## Requirements
 
-- `qbx_core`
+- One framework: `qbx_core` (Qbox), `qb-core` (QBCore), or `es_extended` (ESX Legacy)
 - `ox_lib`
 - `ox_target`
 - `ox_inventory`
@@ -31,7 +31,7 @@ Players need the item configured in `Config.RequiredItem` (`shovel` by default).
 ensure ox_lib
 ensure ox_target
 ensure ox_inventory
-ensure qbx_core
+ensure <your framework>
 ensure w2f-graverobbery
 ```
 
