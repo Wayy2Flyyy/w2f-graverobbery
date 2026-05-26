@@ -1,5 +1,6 @@
 Config = {}
 
+Config.Framework = Config.Framework or 'auto' -- valid: 'auto', 'qbox', 'qbcore', 'esx'
 Config.Locale = 'en'
 Config.RequiredItem = 'shovel'
 Config.DiggingTime = 10000
